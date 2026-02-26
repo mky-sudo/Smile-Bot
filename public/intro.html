@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio of Marx Nicolas, creator of My Smile Bot">
+    <meta name="keywords" content="portfolio, developer, My Smile Bot, AI">
+    <title>Marx Nicolas - My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="intro-bg">
+    <header>
+        <nav class="main-nav">
+            <ul>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <h1>Welcome to My Portfolio</h1>
+        <section id="about">
+            <p>Hello! I'm Marx Nicolas, a young developer and creator of My Smile Bot.</p>
+            <article>
+                <h2>About Me</h2>
+                <p>I am passionate about technology and love creating innovative solutions. My Smile Bot is one of my projects that aims to bring joy and assistance to users through various sectors like Education, Wellbeing, Entertainment, and more.</p>
+                <p>When I started developing this smile bot, it began as a school project in Senior Three. While I wanted to achieve good marks, my main goal was to create something meaningful that could help people smile and advance technology.</p>
+                <p>Though I'm still gaining coding experience, I understand AI data collection principles, which marked the beginning of my journey. I'm a young computer scientist with big dreams and determination.</p><p>
+               I understand the importance of providing a full functional AI, but in my way , I faced a problem of lacking a datbase. For my AI modal to be fully functional with all characteristics of AI, I atleast needed 20Tb database that was a problem on my level.
+                </p>
+         </article>
+        </section>
+
+        <div class="cta-container">
+            <button class="sector" onclick="window.location.href='index.html'" aria-label="Navigate to My Smile Bot">
+                Go to My Smile Bot 🤖
+            </button>
+            <button class="sector" id="howToUseBtn" aria-label="Learn how to use My Smile Bot">
+                How to Use 📖
+            </button>
+        </div>
+
+        <!-- How to Use Modal -->
+        <div id="howToUseModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>How to Use My Smile Bot</h2>
+                    <span class="close close-howToUse">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <h3>Welcome! Here's how to get started:</h3>
+                    
+                    <h4>1. Choose a Sector</h4>
+                    <p>Select one of the available sectors at the top of the page:</p>
+                    <ul>
+                        <li><strong>📖 Bible</strong> - Access Bible resources and references</li>
+                        <li><strong>📚 Education</strong> - Get educational assistance and learning support</li>
+                        <li><strong>🧮 Calculator</strong> - Use calculation tools</li>
+                        <li><strong>🌟 Wellbeing</strong> - Get wellness and mental health support</li>
+                        <li><strong>🎮 Funwhile</strong> - Play games and have fun</li>
+                        <li><strong>📰 News</strong> - Stay updated with the latest news</li>
+                        <li><strong>📖 Dictionary</strong> - Look up word definitions</li>
+                        <li><strong>🌤️ Weather</strong> - Check weather information</li>
+                        <li><strong>📚 Books</strong> - Explore book recommendations</li>
+                        <li><strong>🍳 Recipes</strong> - Find cooking recipes</li>
+                        <li><strong>🎬 Entertainment</strong> - Watch movies and reels</li>
+                    </ul>
+
+                    <h4>2. Ask Your Question</h4>
+                    <p>Type your question or request in the input field at the bottom of the chat box and press <strong>Enter</strong> or click the <strong>Send button</strong>.</p>
+
+                    <h4>3. Interact with the Bot</h4>
+                    <p>My Smile Bot will respond with relevant information based on the sector you've chosen. You can:</p>
+                    <ul>
+                        <li>Ask follow-up questions</li>
+                        <li>Use the microphone icon for voice input</li>
+                        <li>Attach files using the attach file icon</li>
+                    </ul>
+
+                    <h4>4. Switch Between Sectors</h4>
+                    <p>You can switch between sectors at any time by clicking on a different sector button. The bot will remember your preferences.</p>
+
+                    <h4>5. Voice & File Features (Optional)</h4>
+                    <ul>
+                        <li><strong>🎤 Voice Input</strong> - Click the microphone icon to speak your question</li>
+                        <li><strong>📎 Attach File</strong> - Click the paperclip icon to upload files for analysis</li>
+                    </ul>
+
+                    <h4>6. Advanced AI Chat</h4>
+                    <p>For advanced AI conversations, look for the <strong>"Advanced AI Chat"</strong> button at the bottom of the page.</p>
+
+                    <h3>Tips & Tricks:</h3>
+                    <ul>
+                        <li>Be specific with your questions for better responses(one word for many)</li>
+                        <li>Use keywords related to the sector you're in</li>
+                        <li>Your chat history is saved automatically</li>
+                        <li>You can close modals by clicking the X or pressing <strong>ESC</strong></li>
+                    </ul>
+
+                    <p style="margin-top: 2rem; font-style: italic; color: #b8c1ec;">
+                        Enjoy using My Smile Bot! If you have any questions or feedback, feel free to reach out. 
+                        Happy interaction.
+                        Note out that some of the sectors are still under developmental improvements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Marx Nicolas. All rights reserved.</p>
+        <p>reach me out on my emails that are :</p>
+        <p>1. mitirakoramarx@gmail.com</p>
+        <p>2. mkybrown56@gmail.com</p>
+        <p>3. marxnicolas259@gmail.com</p>
+        <p>4. marxn512@gmail.com</p>
+        <p>5. codelife935@gmail.com</p>
+        <p>6. lifecode935@gmail.com</p>
+        <p>7. codenicolas935@gmail.com</p>
+        <p>8. learncomputerscience935@gmail.com</p>
+        <p>9. learnstudies935@gmail.com</p>
+        <p>10. learncpp935@gmail.com</p>
+        <p>11. developprojects935@gmail.com</p>
+    </footer>
+
+    <script>
+        // Handle "How to Use" button
+        const howToUseBtn = document.getElementById('howToUseBtn');
+        const howToUseModal = document.getElementById('howToUseModal');
+        const closeBtn = document.querySelector('.close-howToUse');
+
+        // Open modal
+        if (howToUseBtn) {
+            howToUseBtn.addEventListener('click', () => {
+                howToUseModal.style.display = 'block';
+            });
+        }
+
+        // Close modal
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                howToUseModal.style.display = 'none';
+            });
+        }
+
+        // Close modal when clicking outside
+        if (howToUseModal) {
+            howToUseModal.addEventListener('click', (event) => {
+                if (event.target === howToUseModal) {
+                    howToUseModal.style.display = 'none';
+                }
+            });
+        }
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && howToUseModal && howToUseModal.style.display === 'block') {
+                howToUseModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Smile Bot - AI Assistant</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Font Awesome for platform icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="grid"></div>
+    </div>
+
+    <div class="main-container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-animation"></div>
+                <h1><span class="neon-text">Smile</span> Bot</h1>
+            </div>
+            <p class="subtitle">Classic AI Assistant</p>
+            <div class="ai-status">
+                <span class="status-dot"></span>
+                Chatbot active
+            </div>
+        </header>
+
+        <nav class="sectors-nav glass-effect">
+            <div class="sectors">
+                <button id="bibleBtn" class="sector" data-sector="Bible">
+                    <span class="sector-icon">📖</span>
+                    <span class="sector-text">Bible</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector active" data-sector="Education">
+                    <span class="sector-icon">📚</span>
+                    <span class="sector-text">Education</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button id="calculatorBtn" class="sector" data-sector="Calculator">
+                    <span class="sector-icon">🧮</span>
+                    <span class="sector-text">Calculator</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector" data-sector="Wellbeing">
+                    <span class="sector-icon">🌟</span>
+                    <span class="sector-text">Wellbeing</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector" data-sector="Funwhile">
+                    <span class="sector-icon">🎮</span>
+                    <span class="sector-text">Funwhile</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector" data-sector="News">
+                    <span class="sector-icon">📰</span>
+                    <span class="sector-text">News</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector" data-sector="Dictionary">
+                    <span class="sector-icon">📖</span>
+                    <span class="sector-text">Dictionary</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector" data-sector="Weather">
+                    <span class="sector-icon">🌤️</span>
+                    <span class="sector-text">Weather</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector" data-sector="Books">
+                    <span class="sector-icon">📚</span>
+                    <span class="sector-text">Books</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button class="sector" data-sector="Recipes">
+                    <span class="sector-icon">🍳</span>
+                    <span class="sector-text">Recipes</span>
+                    <span class="hover-effect"></span>
+                </button>
+                <button id="moviesBtn" class="sector" data-sector="Movies">
+                    <span class="sector-icon">🎬</span>
+                    <span class="sector-text">Entertainment</span>
+                    <span class="hover-effect"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="chat-container glass-effect">
+            <div class="chat-header">
+                <div class="chat-status">
+                    <span class="typing-indicator">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </span>
+                      My Smile Bot active
+                </div>
+            </div>
+            
+            <div class="chat-box" id="chat-box">
+                <div class="message bot">
+                    <div class="message-content">
+                        <div class="bot-avatar">
+                            <div class="avatar-ring"></div>
+                        </div>
+                        <div class="text-content">
+                            <div class="bot-name"> Smile Bot</div>
+                            Hello! I'm your student assistant. How can I help you today?. One word for many 
+                            <div class="message-time">Be brief</div>
+                            <div class="message-time">Marx creativity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area glass-effect">
+                <div class="input-container">
+                    <span class="material-icons input-icon">Smart</span>
+                    <input type="text" id="userInput" placeholder="Ask me anything..." autocomplete="off">
+                    <div class="input-actions">
+                        <button class="action-btn" title="Voice Input">
+                            <span class="material-icons">mic</span>
+                        </button>
+                        <button class="action-btn" title="Attach File">
+                            <span class="material-icons">attach_file</span>
+                        </button>
+                    </div>
+                </div>
+                <button onclick="sendMessage()" class="send-btn">
+                    <span class="material-icons">send</span>
+                </button>
+            </div>
+        </div>
+
+
+ <!-- Advanced AI Search Modal -->
+
+
+    <!-- Movies Modal -->
+    <div id="moviesModal" class="modal">
+      <div class="modal-content glass-effect">
+
+        <div class="modal-header">
+          <h2>Watch Reels & Movies</h2>
+          <span class="close close-movies material-icons">close</span>
+        </div>
+        <p>Choose a platform to watch:</p>
+
+        <div class="entertainment-buttons glass-effect">
+          <a class="youtube-btn" href="https://www.youtube.com/shorts" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube"></i>
+            <span class="btn-label">YouTube Shorts</span>
+          </a>
+
+          <a class="tiktok-btn" href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-tiktok"></i>
+            <span class="btn-label">TikTok Reels</span>
+          </a>
+
+          <a class="vimeo-btn" href="https://vimeo.com" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-play-circle"></i>
+            <span class="btn-label">Vimeo Movies</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+   <!-- Funwhile Modal -->
+<div id="funwhileModal" class="modal">
+  <div class="modal-content glass-effect">
+    <div class="modal-header">
+      <h2>Play Games</h2>
+      <span class="close close-funwhile material-icons">close</span>
+    </div>
+    <p>Choose a gaming platform:</p>
+
+    <div class="gaming-buttons glass-effect">
+      <a class="crazygames-btn" href="https://www.crazygames.com" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-gamepad"></i>
+        <span class="btn-label">CrazyGames</span>
+      </a>
+
+      <a class="poki-btn" href="https://poki.com" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-dice"></i>
+        <span class="btn-label">Poki Games</span>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- bible modal-->
+<div id="bibleModal" class="modal">
+    <div class="modal-content glass-effect">
+        <div class="modal-header">
+            <h2>Bible Resources</h2>
+            <span class="close close-bible material-icons">close</span>
+        </div>
+        <div class="bible-buttons glass-effect">
+            <a class="biblegateway-btn" href="https://www.biblegateway.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-book"></i>
+                <span class="btn-label">Bible Gateway</span>
+            </a>
+
+            <a class="biblehub-btn" href="https://biblehub.com" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-cross"></i>
+                <span class="btn-label">Bible Hub</span>
+            </a>
+        </div>
+    </div>
+   </div>
+   
+    <!-- calculator modal  -->
+<div id="calculatorModal" class="modal">
+    <div class="modal-content glass-effect">
+        <div class="modal-header">
+            <h2>Calculator</h2>
+            <span class="close close-calculator material-icons">close</span>
+        </div>
+        <p>Choose your calculator:</p>
+        <div class="calculator-buttons glass-effect">
+            <a class="calculator-btn" href="https://www.calculator.net" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-calculator"></i>
+                <span class="btn-label">Basic Calculator</span>
+            </a>
+            <a class="calculator-btn scientific" href="https://www.calculator.net/scientific-calculator.html" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-square-root-alt"></i>
+                <span class="btn-label">Scientific Calculator</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Advanced Search Modal -->
+<div id="advancedSearchModal" class="modal" style="display: none;">
+  <div class="modal-content glass-effect">
+    <div class="modal-header">
+      <h2>Advanced Search</h2>
+      <span class="close" id="closeAdvancedSearch">&times;</span>
+    </div>
+    <div class="modal-body">
+      <input type="text" id="advancedQuery" placeholder="Enter your query...">
+      <select id="advancedSector">
+        <option value="Education">Education</option>
+        <option value="Dictionary">Dictionary</option>
+        <option value="Weather">Weather</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Wellbeing">Wellbeing</option>
+        <option value="News">News</option>
+        <option value="Books">Books</option>
+        <option value="Recipes">Recipes</option>
+        <option value="Movies">Movies</option>
+      </select>
+      <button id="submitAdvancedSearch">Search</button>
+      <div id="advancedResults"></div>
+    </div>
+  </div>
+</div>
+<button id="advancedSearchBtn">Advanced Search</button>
+
+<script>
+const advBtn = document.getElementById('advancedSearchBtn');
+const advModal = document.getElementById('advancedSearchModal');
+const closeBtn = document.getElementById('closeAdvancedSearch');
+
+advBtn.addEventListener('click', () => {
+  advModal.style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  advModal.style.display = 'none';
+});
+
+// Close modal if clicking outside
+window.addEventListener('click', (e) => {
+  if (e.target === advModal) {
+    advModal.style.display = 'none';
+  }
+});
+</script>
+
+
+<script src="script.js"></script>
+
+
+<script>
+document.getElementById('submitAdvancedSearch').addEventListener('click', async () => {
+  const query = document.getElementById('advancedQuery').value;
+  const sector = document.getElementById('advancedSector').value;
+
+  if (!query) return alert('Please enter a query');
+
+  const res = await fetch('/advanced-search', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query, sector })
+  });
+
+  const data = await res.json();
+  const resultsDiv = document.getElementById('advancedResults');
+
+  if (data.success) {
+    resultsDiv.innerHTML = `<pre>${JSON.stringify(data.result, null, 2)}</pre>`;
+  } else {
+    resultsDiv.innerHTML = `<p style="color:red;">${data.error}</p>`;
+  }
+});
+</script>
+
+</body>
+</html>
+   
